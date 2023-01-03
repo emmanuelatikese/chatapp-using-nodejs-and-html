@@ -1,0 +1,103 @@
+body{
+    margin:0;
+    padding:0;
+    font-family:sans-serif;
+    
+    
+}
+h1{
+    margin-left: 10px;
+    color:white;
+}
+h2{
+    margin-top:5px;
+    margin-left:10px;
+}
+li{
+    list-style-type: none;
+    border: 1px solid white;
+    margin-left:-20px;
+    width:70px;
+    text-align: center;
+    height: 20px;
+    padding:2px;
+    border-radius: 8px;
+    
+
+}
+
+#chat-container{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 800px;
+    height: 500px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right, #4abde8, #2b95d6);
+}
+
+#profiles{
+    width:200px;
+    border-radius: 5px;
+    height: 400px;
+    margin-top:auto;
+    margin-bottom: auto;
+    box-sizing: border-box;
+    border:1px solid white;
+    margin-left: 10px;
+    color:white;
+}
+
+
+
+
+#form-register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:30px;
+    width:400px;
+    height:300px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:50px;
+    padding:20px;
+    
+    border-radius: 8px;
+    background: linear-gradient(to right, #4abde8, #2b95d6);
+
+}
+
+input,select{
+    outline:none;
+    
+    height: 25px;
+    border-radius: 8px;
+    border:none;
+    padding-left:5px;
+    cursor: pointer;
+}
+
+option{
+    background: linear-gradient(to-right, #7b4397, #dc2430);
+    cursor: pointer;
+}
+
+button{
+    width: 70px;
+    height:35px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    border:none;
+    cursor:pointer;
+    transition: 2s;
+    
+}
+button:hover{
+    background-color: #2b95d6;
+}
