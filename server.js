@@ -24,7 +24,14 @@ io.on('connection', (socket)=>{
 		
 		socket.join(user.room);
 
+		socket.emit('message', userMessage("ADMIN", `Welcome, ${user.username}!`))
+
 		socket.broadcast.to(user.room).emit('message', userMessage("ADMIN", `${user.username} has join the chat!`))
+
+		io.to(user.room).emit('userLeave', {
+			users:getRoom(user.room),
+			room:user.room
+		})
 
 	})
 
@@ -40,9 +47,12 @@ io.on('connection', (socket)=>{
 	socket.on('disconnect', ()=>{
 		const user = roomLeave(socket.id)
 		if(user){
-			io.to(user.room).emit("message", userMessage("admin", `${user.username} has left the chat !`));
+			io.emit("message", userMessage("admin", `${user.username} has left the chat !`));
 		}
-		
+		io.to(user.room).emit('userLeave', {
+			users:getRoom(user.room),
+			room:user.room
+		})
 	})
 
 })

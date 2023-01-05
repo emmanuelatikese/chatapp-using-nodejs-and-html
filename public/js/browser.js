@@ -16,6 +16,25 @@ socket.on('message', (msg)=>{
 
 })
 
+socket.on('userLeave', ({users,room})=>{
+    ShowUser(users);
+    ShowRoom(room);
+})
+
+function ShowRoom(room){
+    document.querySelector('#room-name').innerHTML = `${room}` 
+}
+
+
+function ShowUser(users){
+
+    document.getElementById('userList').innerHTML = `${users.map((user)=>
+        `<li>${user.username}</li>`
+    ).join('')}`
+}
+
+
+
 const ChatContainer = document.querySelector('.chat-message');
 
 function showText(msg){
