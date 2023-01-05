@@ -13,6 +13,9 @@ h2{
     margin-top:5px;
     margin-left:10px;
 }
+ul{
+    overflow-y: scroll;
+}
 li{
     list-style-type: none;
     border: 1px solid white;
@@ -25,10 +28,12 @@ li{
     
 
 }
-
+p{
+    text-align: left;
+}
 #chat-container{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     box-sizing: border-box;
     width: 800px;
     height: 500px;
@@ -82,22 +87,93 @@ input,select{
     cursor: pointer;
 }
 
-option{
-    background: linear-gradient(to-right, #7b4397, #dc2430);
+#chatInput{
+    width:510px;
+    height:35px;
+}
+
+option:hover{
+    background:#2b95d6;
     cursor: pointer;
+    color:white;
 }
 
 button{
     width: 70px;
     height:35px;
-    margin-left: auto;
-    margin-right: auto;
     border-radius: 8px;
     border:none;
     cursor:pointer;
-    transition: 2s;
+    transition: 0.4s;
+    
+}
+#Sendbtn{
+    margin-top:2px;
+    margin-right:2px;
+}
+
+#userSubmit{
+    margin-left: auto;
+    margin-right: auto;
     
 }
 button:hover{
     background-color: #2b95d6;
+    color:white;
 }
+
+#chat-form{
+    width: 600px;
+    height: 400px;
+    margin-left:9px;
+    border: none;
+    margin-top:auto;
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-message{
+    width:600px;
+    height:350px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background-color:#2b95d6;
+}
+
+.chat{
+    
+    margin-top:5px;
+    text-align: center;
+}
+.input-chat{
+    display: flex;
+    flex-direction: row;
+    margin-top:5px;
+    justify-content: space-between;
+}
+
+.chat{
+    width: auto;
+    height:auto;
+    background: linear-gradient(to right, #4abde8, #2b95d6);
+    display: flex;
+    justify-content:flex-start;
+    border-radius: 8px;
+    color:aliceblue;
+    padding:5px;
+    flex-wrap: wrap;
+    margin-left:10px;
+    margin-right:10px;
+}
+
