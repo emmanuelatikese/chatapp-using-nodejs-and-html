@@ -28,9 +28,7 @@ li{
     
 
 }
-p{
-    text-align: left;
-}
+
 #chat-container{
     display: flex;
     flex-direction: row;
@@ -154,7 +152,7 @@ button:hover{
 .chat{
     
     margin-top:5px;
-    text-align: center;
+    
 }
 .input-chat{
     display: flex;

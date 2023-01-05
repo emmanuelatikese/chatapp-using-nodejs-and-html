@@ -34,7 +34,7 @@ io.on('connection', (socket)=>{
 		console.log(user, 'from chat')
 
 
-		socket.emit('message', userMessage(user.username, msg))
+		io.to(user.room).emit('message', userMessage(user.username, msg))
 	})
 
 	socket.on('disconnect', ()=>{

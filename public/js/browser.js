@@ -23,8 +23,8 @@ function showText(msg){
     const chat = document.createElement('div')
     chat.classList.add('chat')
     chat.innerHTML = `
-        <p>${msg.username}</p>  <span>${msg.time}</span>
-        <p>${msg.text}</p>
+        <span>${msg.username}</span> @<span>${msg.time}</span>
+        <p id="text-id">${msg.text}</p>
         
     `
     ChatContainer.appendChild(chat);
