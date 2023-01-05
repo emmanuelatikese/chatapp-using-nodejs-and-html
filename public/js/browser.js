@@ -12,6 +12,7 @@ socket.emit('JoinRoom', {username, room});
 socket.on('message', (msg)=>{
 
     showText(msg);
+    document.querySelector('#chatInput').value = ''
 
 })
 
@@ -38,9 +39,9 @@ formChat.addEventListener('submit', (e)=>{
     msg = e.target.elements.chatInput.value;
     console.log(msg)
 
-    socket.emit('ChatMessage', msg)
+    socket.emit('ChatMessage', msg);
 
-    e.target.elements.chatInput.value = ''
+    
 
     ChatContainer.scrollTop = ChatContainer.scrollHeight;
 })
